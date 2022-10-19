@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class DogApiService {
   dogUrlImg:string;
   dogName:string
+  splitName:Array<string>
   constructor(private http:HttpClient) { }
   getDogApiData(){
     return this.http.get<any>('https://dog.ceo/api/breeds/list/all');
@@ -17,8 +18,9 @@ export class DogApiService {
     if(name.indexOf(' ')===-1){
       return this.http.get<any>(`https://dog.ceo/api/breed/${name}/images/random`)
     }
-    name = name.slice(0,name.indexOf(' '))
+    // name = name.slice(0,name.indexOf(' '))
+    this.splitName = name.split(' ')
     console.log(name)
-    return this.http.get<any>(`https://dog.ceo/api/breed/${name}/images/random`)
+    return this.http.get<any>(`https://dog.ceo/api/breed/${this.splitName[0]}/${this.splitName[1]}/images/random`)
   }
 }
