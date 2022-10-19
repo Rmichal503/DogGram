@@ -1,0 +1,11 @@
+<div class="selectContainer" *ngIf={dogData}>
+    <select class='dogSelect' #dogBreeds (change)="dogImg(dogBreeds.value)">
+        <option value="-">Choose dog breed</option>
+        <option *ngFor="let item of dogData" value={{item}}>{{item}}</option>
+    </select>
+    <!-- <div *ngFor="let item of dogData">
+        <p (click)="dogImg(item)">{{item}}</p>
+    </div> -->
+
+</div>
+

@@ -1,0 +1,24 @@
+.selectContainer{
+    margin-bottom: 0.5rem;
+    position: absolute;
+    top: 3.5rem;
+    transform: translateX(-50%);
+    @media screen and (max-width:500px) {
+        top:7rem
+    }
+    .dogSelect{
+        background-color: #00459e;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        padding: 0.2rem;
+        text-align: center;
+        &:focus{
+            border: 1px solid rgba(116, 20, 89, 0.4);
+        }
+        &:focus-visible{
+            border: 1px solid rgba(176, 36, 137, 0.572);
+        }
+        
+    }
+}

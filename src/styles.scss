@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --smallImg:300px;
+    --bigImg:500px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;1000&display=swap');
+@mixin flexCenter {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+*{
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+body{
+    background-image: url('./assets/Animated\ Shape.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 100vw;
+}

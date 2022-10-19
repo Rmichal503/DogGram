@@ -1,0 +1,10 @@
+<div class="viewContainer">
+    <div class="imgContainer">
+        <a [href]='wikiLink'>
+            <img *ngIf="dogName; else loading" class='dogImg' [src]="dogUrl" alt=""/>
+            <span class="tooltip" *ngIf="dogName"><span class="smallScreen">Click on photo to </span>Read more on Wiki about {{dogName}} breed</span>
+        </a>
+        <ng-template #loading><img class="dogAnimation" src="../../../assets/dogo.gif" alt="running dog"></ng-template>
+    </div>
+    
+</div>
